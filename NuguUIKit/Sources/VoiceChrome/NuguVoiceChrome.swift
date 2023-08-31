@@ -259,7 +259,7 @@ public extension NuguVoiceChrome {
 private extension NuguVoiceChrome {
     func playAnimationByState() {
         #if DEPLOY_OTHER_PACKAGE_MANAGER
-        animationView.animation = LottieAnimation.named(currentState.transitionFileName, bundle: Bundle(for: NuguVoiceChrome.self))                
+        animationView.animation = LottieAnimation.named(currentState.transitionFileName, bundle: Bundle(for: NuguVoiceChrome.self))
         #else
         animationView.animation = LottieAnimation.named(currentState.transitionFileName, bundle: Bundle.module)
         #endif

@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.dependency 'NuguUtils', s.version.to_s
   
   s.dependency 'NattyLog', '~> 1'
-  s.dependency 'lottie-ios', '~> 3'
+  s.dependency 'lottie-ios', '~> 4'
   
   s.xcconfig = {
     'OTHER_SWIFT_FLAGS' => '-DDEPLOY_OTHER_PACKAGE_MANAGER'

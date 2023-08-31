@@ -4,7 +4,7 @@ target 'SampleApp' do
   use_frameworks!
 
   pod 'NuguClientKit', :path => '../'
-  pod 'NuguUIKit', :path => '../'
+  pod 'NuguUIKit-External', :path => '../'
   pod 'NuguLoginKit', :path => '../'
   pod 'TycheSDK', :path => '../'
   pod 'JadeMarble', :path => '../'

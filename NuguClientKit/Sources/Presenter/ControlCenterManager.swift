@@ -22,7 +22,7 @@ import Foundation
 import MediaPlayer
 
 import NuguAgents
-import NuguUIKit
+import NuguUIKitExternal
 
 final class ControlCenterManager {
     private var nowPlayingInfo: [String: Any] = [:] {

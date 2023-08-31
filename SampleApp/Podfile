@@ -3,8 +3,8 @@ platform :ios, '12.0'
 target 'SampleApp' do
   use_frameworks!
 
-  pod 'NuguClientKit', :path => '../'
-  pod 'NuguUIKit-External', :path => '../'
+  pod 'NuguClientKitExternal', :path => '../'
+  pod 'NuguUIKitExternal', :path => '../'
   pod 'NuguLoginKit', :path => '../'
   pod 'TycheSDK', :path => '../'
   pod 'JadeMarble', :path => '../'

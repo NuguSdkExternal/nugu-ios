@@ -20,7 +20,7 @@
 
 import UIKit
 
-import NuguUIKit
+import NuguUIKitExternal
 
 final class IntroViewController: UIViewController {
     // MARK: Override

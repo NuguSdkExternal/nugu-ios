@@ -20,7 +20,7 @@
 
 import UIKit
 
-import NuguClientKit
+import NuguClientKitExternal
 
 final class SettingViewController: UIViewController {
     // MARK: - Properties

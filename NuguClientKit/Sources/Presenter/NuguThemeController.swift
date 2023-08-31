@@ -44,10 +44,10 @@ public extension NuguClientNotification {
     enum NuguThemeState {
         struct Theme: TypedNotification {
             public static let name: Notification.Name = .nuguThemeDidChange
-            public let theme: NuguClientKit.NuguTheme
+            public let theme: NuguClientKitExternal.NuguTheme
             
             public static func make(from: [String: Any]) -> Theme? {
-                guard let theme = from["theme"] as? NuguClientKit.NuguTheme else { return nil }
+                guard let theme = from["theme"] as? NuguClientKitExternal.NuguTheme else { return nil }
                 return Theme(theme: theme)
             }
         }

@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguUIKit
+import NuguUIKitExternal
 
 /// A delegate that application can extend to observe `VoiceChromePresenter` changes.
 public protocol VoiceChromePresenterDelegate: AnyObject {

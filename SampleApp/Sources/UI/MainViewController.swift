@@ -22,7 +22,7 @@ import UIKit
 import AVFoundation
 
 import NuguAgents
-import NuguClientKit
+import NuguClientKitExternal
 import NuguUIKit
 
 final class MainViewController: UIViewController {

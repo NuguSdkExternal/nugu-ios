@@ -19,7 +19,7 @@
 //
 
 import Foundation
-import NuguClientKit
+import NuguClientKitExternal
 
 extension UserDefaults {
     enum Standard {

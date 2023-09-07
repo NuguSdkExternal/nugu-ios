@@ -185,13 +185,13 @@ public extension NuguClientNotification {
     enum DialogState {
         public struct State: TypedNotification {
             public static let name: Notification.Name = .dialogStateDidChange
-            public let state: NuguClientKit.DialogState
+            public let state: NuguClientKitExternal.DialogState
             public let multiTurn: Bool
             public let item: ChipsAgentItem?
             public let sessionActivated: Bool
             
             public static func make(from: [String: Any]) -> State? {
-                guard let state = from["state"] as? NuguClientKit.DialogState,
+                guard let state = from["state"] as? NuguClientKitExternal.DialogState,
                       let multiTurn = from["multiTurn"] as? Bool,
                       let sessionActivated = from["sessionActivated"] as? Bool else { return nil }
                 

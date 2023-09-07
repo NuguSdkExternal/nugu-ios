@@ -12,7 +12,7 @@ let package = Package(
         .library(
             name: "nugu-ios",
             type: .dynamic,
-            targets: ["NuguClientKit", "NuguAgents", "NuguUtils", "NuguServiceKit", "NuguLoginKit", "NuguUIKit", "KeenSense", "NuguCore"]
+            targets: ["NuguClientKitExternal", "NuguAgents", "NuguUtils", "NuguServiceKit", "NuguLoginKit", "NuguUIKit", "KeenSense", "NuguCore"]
         )
     ],
     dependencies: [
@@ -136,7 +136,7 @@ let package = Package(
             exclude: ["Info.plist", "README.md"]
         ),
         .target(
-            name: "NuguClientKit",
+            name: "NuguClientKitExternal",
             dependencies: ["NuguAgents", "NattyLog", "RxSwift", "NuguUtils", "NuguServiceKit", "NuguLoginKit", "NuguUIKit", "KeenSense", "NuguCore"],
             path: "NuguClientKit/",
             exclude: ["Info.plist", "README.md"]

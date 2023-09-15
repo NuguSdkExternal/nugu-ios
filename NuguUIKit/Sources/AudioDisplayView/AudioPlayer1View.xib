@@ -391,7 +391,7 @@
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ao-iv-h9T" userLabel="BarAudioPlayerContainerView">
                     <rect key="frame" x="0.0" y="752" width="390" height="92"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUg-yj-tT4" customClass="AudioPlayerBarView" customModule="NuguUIKitExternal" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUg-yj-tT4" customClass="AudioPlayerBarView" customModule="NuguUIKitExternal">
                             <rect key="frame" x="0.0" y="0.0" width="390" height="58"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="58" id="oSy-Sm-Jvd"/>

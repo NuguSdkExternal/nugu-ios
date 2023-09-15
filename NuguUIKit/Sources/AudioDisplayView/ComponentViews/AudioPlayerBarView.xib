@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioPlayerBarView" customModule="NuguUIKit" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioPlayerBarView" customModuleProvider="target">
             <connections>
                 <outlet property="bodyLabel" destination="0zR-3f-SZz" id="uJQ-Fz-iiq"/>
                 <outlet property="closeButton" destination="KkJ-UC-6pi" id="Pbf-I0-ylT"/>

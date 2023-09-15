@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NuguChipsView" customModule="NuguUIKitExternal" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NuguChipsView" customModuleProvider="target">
             <connections>
                 <outlet property="chipsScrollView" destination="MMh-eb-t2Y" id="owN-BW-jNK"/>
             </connections>

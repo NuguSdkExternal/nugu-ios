@@ -24,7 +24,7 @@ import NuguCore
 import NuguAgents
 import NuguClientKitExternal
 import NuguLoginKit
-import NuguUIKit
+import NuguUIKitExternal
 
 final class NuguCentralManager {
     static let shared = NuguCentralManager()

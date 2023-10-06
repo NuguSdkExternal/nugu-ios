@@ -22,7 +22,7 @@ Default Instances for Nugu service
   s.dependency 'NuguAgents', '1.7.9'
   s.dependency 'KeenSense', '1.7.9'
   s.dependency 'NuguLoginKit', '1.7.9'
-  s.dependency 'NuguUIKit', '1.7.9'
+  s.dependency 'NuguUIKitExternal', '1.7.9'
   s.dependency 'NuguUtils', '1.7.9'
   s.dependency 'NuguServiceKit', '1.7.9'
 

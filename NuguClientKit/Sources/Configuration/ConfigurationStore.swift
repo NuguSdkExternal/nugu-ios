@@ -23,7 +23,7 @@ import Foundation
 import NuguCore
 import NuguUtils
 import NuguLoginKit
-import NuguUIKit
+import NuguUIKitExternal
 
 /// The entry point of NUGU SDKs.
 ///

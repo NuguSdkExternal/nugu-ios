@@ -23,7 +23,7 @@ import AVFoundation
 
 import NuguAgents
 import NuguClientKitExternal
-import NuguUIKit
+import NuguUIKitExternal
 
 final class MainViewController: UIViewController {
     // MARK: Properties

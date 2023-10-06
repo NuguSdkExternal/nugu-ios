@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name = 'NuguUIKit'
+  s.name = 'NuguUIKitExternal'
   s.version = '1.7.9'
   s.license = 'Apache License, Version 2.0'
   s.summary = 'UI Set of Nugu Service'
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.dependency 'NuguUtils', s.version.to_s
   
   s.dependency 'NattyLog', '~> 1'
-  s.dependency 'lottie-ios', '~> 3'
+  s.dependency 'lottie-ios', '~> 4'
   
   s.xcconfig = {
     'OTHER_SWIFT_FLAGS' => '-DDEPLOY_OTHER_PACKAGE_MANAGER'

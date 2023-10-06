@@ -6,7 +6,7 @@ PODS:
     - NattyLog (~> 1)
     - NuguUtils (= 1.7.9)
     - TycheSDK (= 1.7.9)
-  - lottie-ios (3.4.3)
+  - lottie-ios (4.2.0)
   - NattyLog (1.2.2)
   - NuguAgents (1.7.9):
     - JadeMarble (= 1.7.9)
@@ -21,7 +21,7 @@ PODS:
     - NuguCore (= 1.7.9)
     - NuguLoginKit (= 1.7.9)
     - NuguServiceKit (= 1.7.9)
-    - NuguUIKit (= 1.7.9)
+    - NuguUIKitExternal (= 1.7.9)
     - NuguUtils (= 1.7.9)
   - NuguCore (1.7.9):
     - NattyLog (~> 1.0)
@@ -33,8 +33,8 @@ PODS:
   - NuguServiceKit (1.7.9):
     - NattyLog (~> 1)
     - NuguUtils (= 1.7.9)
-  - NuguUIKit (1.7.9):
-    - lottie-ios (~> 3)
+  - NuguUIKitExternal (1.7.9):
+    - lottie-ios (~> 4)
     - NattyLog (~> 1)
     - NuguAgents (= 1.7.9)
     - NuguUtils (= 1.7.9)
@@ -57,7 +57,7 @@ DEPENDENCIES:
   - NuguLoginKit (from `../`)
   - NuguObjcUtils (from `../`)
   - NuguServiceKit (from `../`)
-  - NuguUIKit (from `../`)
+  - NuguUIKitExternal (from `../`)
   - NuguUtils (from `../`)
   - OpusSDK (from `../`)
   - SilverTray (from `../`)
@@ -86,7 +86,7 @@ EXTERNAL SOURCES:
     :path: "../"
   NuguServiceKit:
     :path: "../"
-  NuguUIKit:
+  NuguUIKitExternal:
     :path: "../"
   NuguUtils:
     :path: "../"
@@ -100,21 +100,21 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   JadeMarble: 3f109fe425ce106fecbf8b6f2f58b33846763321
   KeenSense: 937707bf6b5ecd1ee14fbac95b85d2e75afae2b2
-  lottie-ios: 9ae750cdc7820fecbd3c2f0cfc493038208fcdc4
+  lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
   NattyLog: 1a54981676b1dee3018b5e6cefed03b029212baa
   NuguAgents: 5c81b929e5fad1e9f3e2a751408203389d1521b5
-  NuguClientKitExternal: 6febfa6294949a12e0275ffd56e2ef813fa82865
+  NuguClientKitExternal: 4ecacdfb3e51d0d4c01ccb0f5bf28a18bcb85658
   NuguCore: 54ab7e3cd484d6524f1f06eb352d5f2b1bc51c18
   NuguLoginKit: d93335f99f986ec69a71c977367bc0045dea4456
   NuguObjcUtils: 51dbca2fba1440f30fcf8715f992f3a9b6245d64
   NuguServiceKit: 5e237b21a0bac1ee01537be3d4fc292a88a5c7dd
-  NuguUIKit: 8090a76da465fc79895f2f27e3ba647c7ad3d133
+  NuguUIKitExternal: 93860e1e0f97a79c45f79b405bb42e6dbf9689fc
   NuguUtils: 7bc7dde6e80e3548e0c185ff3dd7153fcd31564f
   OpusSDK: dd6a3782376241a4de3dcf29ea52eb565ba69880
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SilverTray: b46f7c24b14d2e30175f5f94e1fc1f307975ac03
   TycheSDK: 7c85c0cb882f6cd17fbaf7a39cf8ce17f6749a97
 
-PODFILE CHECKSUM: 750426b0889f995e8a90a1af6657c17e085c26d8
+PODFILE CHECKSUM: 0c8f1366cb8caabec97f5b25d0205592515c6b43
 
 COCOAPODS: 1.12.1

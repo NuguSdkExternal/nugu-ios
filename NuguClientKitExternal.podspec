@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'NuguClientKitExternal'
-  s.version = '1.7.10-beta.1'
+  s.version = '1.7.10-beta.2'
   s.license = 'Apache License, Version 2.0'
   s.summary = 'Nugu Client Kit'
   s.description = <<-DESC
@@ -22,7 +22,7 @@ Default Instances for Nugu service
   s.dependency 'NuguAgents', '1.7.9'
   s.dependency 'KeenSense', '1.7.9'
   s.dependency 'NuguLoginKit', '1.7.9'
-  s.dependency 'NuguUIKitExternal', '1.7.9'
+  s.dependency 'NuguUIKitExternal', '1.7.10-beta.2'
   s.dependency 'NuguUtils', '1.7.9'
   s.dependency 'NuguServiceKit', '1.7.9'
 

@@ -14,14 +14,14 @@ PODS:
     - NuguCore (= 1.7.9)
     - NuguUtils (= 1.7.9)
     - SilverTray (= 1.7.9)
-  - NuguClientKitExternal (1.7.10-beta.1):
+  - NuguClientKitExternal (1.7.10-beta.2):
     - KeenSense (= 1.7.9)
     - NattyLog (~> 1)
     - NuguAgents (= 1.7.9)
     - NuguCore (= 1.7.9)
     - NuguLoginKit (= 1.7.9)
     - NuguServiceKit (= 1.7.9)
-    - NuguUIKitExternal (= 1.7.9)
+    - NuguUIKitExternal (= 1.7.10-beta.2)
     - NuguUtils (= 1.7.9)
   - NuguCore (1.7.9):
     - NattyLog (~> 1.0)
@@ -33,7 +33,7 @@ PODS:
   - NuguServiceKit (1.7.9):
     - NattyLog (~> 1)
     - NuguUtils (= 1.7.9)
-  - NuguUIKitExternal (1.7.9):
+  - NuguUIKitExternal (1.7.10-beta.2):
     - lottie-ios (~> 4)
     - NattyLog (~> 1)
     - NuguAgents (= 1.7.9)
@@ -103,12 +103,12 @@ SPEC CHECKSUMS:
   lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
   NattyLog: 1a54981676b1dee3018b5e6cefed03b029212baa
   NuguAgents: 5c81b929e5fad1e9f3e2a751408203389d1521b5
-  NuguClientKitExternal: 4ecacdfb3e51d0d4c01ccb0f5bf28a18bcb85658
+  NuguClientKitExternal: 2a82ce1a37a5de0d95f4ae972093854fffb5530a
   NuguCore: 54ab7e3cd484d6524f1f06eb352d5f2b1bc51c18
   NuguLoginKit: d93335f99f986ec69a71c977367bc0045dea4456
   NuguObjcUtils: 51dbca2fba1440f30fcf8715f992f3a9b6245d64
   NuguServiceKit: 5e237b21a0bac1ee01537be3d4fc292a88a5c7dd
-  NuguUIKitExternal: 93860e1e0f97a79c45f79b405bb42e6dbf9689fc
+  NuguUIKitExternal: 7842947a1381dc7d8fb87032b893db99070db362
   NuguUtils: 7bc7dde6e80e3548e0c185ff3dd7153fcd31564f
   OpusSDK: dd6a3782376241a4de3dcf29ea52eb565ba69880
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8

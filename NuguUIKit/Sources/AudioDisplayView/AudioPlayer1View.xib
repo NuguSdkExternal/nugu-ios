@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioPlayer1View" customModule="NuguUIKitExternal" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioPlayer1View" customModuleProvider="target">
             <connections>
                 <outlet property="albumImageContainerView" destination="pwR-Pf-bVH" id="Dqt-Kn-56c"/>
                 <outlet property="albumImageView" destination="onk-DF-rU0" id="V8c-Is-JAJ"/>
@@ -49,11 +49,11 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XB6-sV-z0B">
                     <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                     <subviews>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHe-JQ-duj" customClass="FullLyricsView" customModule="NuguUIKitExternal" customModuleProvider="target">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHe-JQ-duj" customClass="FullLyricsView" customModule="NuguUIKitExternal">
                             <rect key="frame" x="20" y="123" width="350" height="522"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekx-W3-HQh" customClass="DisplayTitleView" customModule="NuguUIKitExternal" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekx-W3-HQh" customClass="DisplayTitleView" customModule="NuguUIKitExternal">
                             <rect key="frame" x="0.0" y="47" width="390" height="76"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vu-vb-vL1" userLabel="BarTypeButton">
@@ -159,7 +159,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="1zs-rr-41A">
                                             <rect key="frame" x="20" y="0.0" width="350" height="162.33333333333334"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIM-fd-0zp" userLabel="contentTitleLabel" customClass="MarqueeLabel" customModule="NuguUIKitExternal" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIM-fd-0zp" userLabel="contentTitleLabel" customClass="MarqueeLabel" customModule="NuguUIKitExternal">
                                                     <rect key="frame" x="0.0" y="0.0" width="350" height="23"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -324,7 +324,7 @@
                                 </view>
                             </subviews>
                         </stackView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FcB-0U-tGu" customClass="DisplayIdleBar" customModule="NuguUIKitExternal" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FcB-0U-tGu" customClass="DisplayIdleBar" customModule="NuguUIKitExternal">
                             <rect key="frame" x="0.0" y="742" width="390" height="68"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="68" id="pQ7-qN-hoE"/>
@@ -391,7 +391,7 @@
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ao-iv-h9T" userLabel="BarAudioPlayerContainerView">
                     <rect key="frame" x="0.0" y="752" width="390" height="92"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUg-yj-tT4" customClass="AudioPlayerBarView" customModule="NuguUIKitExternal" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUg-yj-tT4" customClass="AudioPlayerBarView" customModule="NuguUIKitExternal">
                             <rect key="frame" x="0.0" y="0.0" width="390" height="58"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="58" id="oSy-Sm-Jvd"/>

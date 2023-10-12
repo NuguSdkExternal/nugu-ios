@@ -21,7 +21,7 @@
 import Foundation
 
 import NuguCore
-import NuguAgents
+import NuguAgentsExternal
 
 public typealias Directive = Downstream.Directive
 public typealias DirectiveAttachment = Downstream.Attachment

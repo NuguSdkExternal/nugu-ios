@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-import NuguAgents
+import NuguAgentsExternal
 
 /// <#Description#>
 public protocol AudioDisplayViewDelegate: AnyObject {

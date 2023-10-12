@@ -21,7 +21,7 @@
 import Foundation
 
 import NuguCore
-import NuguAgents
+import NuguAgentsExternal
 
 class BackgroundFocusHolder {
     private let focusManager: FocusManageable

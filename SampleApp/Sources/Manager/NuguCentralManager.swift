@@ -21,7 +21,7 @@
 import UIKit
 
 import NuguCore
-import NuguAgents
+import NuguAgentsExternal
 import NuguClientKitExternal
 import NuguLoginKit
 import NuguUIKitExternal

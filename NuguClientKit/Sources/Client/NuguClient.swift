@@ -22,7 +22,7 @@ import Foundation
 import AVFoundation
 
 import NuguCore
-import NuguAgents
+import NuguAgentsExternal
 
 /// <#Description#>
 public class NuguClient {

@@ -21,7 +21,7 @@
 import Foundation
 
 import NuguLoginKit
-import NuguAgents
+import NuguAgentsExternal
 
 enum SampleAppError: Error {
     case nilValue(description: String?)

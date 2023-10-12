@@ -20,7 +20,7 @@
 
 import AVFoundation
 
-import NuguAgents
+import NuguAgentsExternal
 
 final public class AudioSessionManager: AudioSessionManageable {
     public weak var delegate: AudioSessionManagerDelegate?

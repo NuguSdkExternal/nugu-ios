@@ -21,7 +21,7 @@
 import UIKit
 
 import NuguUtils
-import NuguAgents
+import NuguAgentsExternal
 
 final class AudioPlayer1View: AudioDisplayView {
     // Private Properties

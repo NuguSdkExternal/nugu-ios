@@ -21,7 +21,7 @@
 import UIKit
 import AVFoundation
 
-import NuguAgents
+import NuguAgentsExternal
 import NuguClientKitExternal
 import NuguUIKitExternal
 

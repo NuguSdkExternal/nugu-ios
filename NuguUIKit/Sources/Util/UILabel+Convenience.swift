@@ -20,7 +20,7 @@
 
 import UIKit
 
-import NuguAgents
+import NuguAgentsExternal
 
 extension UILabel {
     func setDisplayText(displayText: DisplayCommonTemplate.Common.Text?) {

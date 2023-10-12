@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguAgents
+import NuguAgentsExternal
 
 /// Identifies the dialog state.
 public enum DialogState {

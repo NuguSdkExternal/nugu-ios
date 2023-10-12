@@ -21,7 +21,7 @@
 import Foundation
 
 import NuguCore
-import NuguAgents
+import NuguAgentsExternal
 import NuguUtils
 
 /// DialogStateAggregator aggregate several components state into one.

@@ -20,7 +20,7 @@
 
 import UIKit
 
-import NuguAgents
+import NuguAgentsExternal
 import NuguUtils
 
 /// <#Description#>

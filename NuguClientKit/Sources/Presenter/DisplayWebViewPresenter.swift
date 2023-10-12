@@ -22,7 +22,7 @@ import Foundation
 import UIKit
 import WebKit
 
-import NuguAgents
+import NuguAgentsExternal
 import NuguUIKitExternal
 import NuguCore
 import NuguUtils

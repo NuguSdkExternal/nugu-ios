@@ -21,7 +21,7 @@
 import UIKit
 import WebKit
 
-import NuguAgents
+import NuguAgentsExternal
 import NuguUtils
 
 /// <#Description#>

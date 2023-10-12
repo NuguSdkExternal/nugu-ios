@@ -139,10 +139,10 @@ public extension NuguAgentNotification {
     enum Session {
         public struct Set: TypedNotification {
             public static let name: Notification.Name = .sessionDidSet
-            public let session: NuguAgents.Session
+            public let session: NuguAgentsExternal.Session
             
             public static func make(from: [String: Any]) -> Set? {
-                guard let session = from["session"] as? NuguAgents.Session else { return nil }
+                guard let session = from["session"] as? NuguAgentsExternal.Session else { return nil }
                 
                 return Set(session: session)
             }
@@ -150,10 +150,10 @@ public extension NuguAgentNotification {
         
         public struct UnSet: TypedNotification {
             public static let name: Notification.Name = .sessionDidUnSet
-            public let session: NuguAgents.Session
+            public let session: NuguAgentsExternal.Session
 
             public static func make(from: [String: Any]) -> UnSet? {
-                guard let session = from["session"] as? NuguAgents.Session else { return nil }
+                guard let session = from["session"] as? NuguAgentsExternal.Session else { return nil }
                 
                 return UnSet(session: session)
             }

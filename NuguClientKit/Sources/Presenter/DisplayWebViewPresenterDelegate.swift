@@ -19,7 +19,7 @@
 //
 
 import Foundation
-import NuguAgents
+import NuguAgentsExternal
 
 /// A delegate that application can extend to observe `DisplayWebViewPresenter` changes.
 public protocol DisplayWebViewPresenterDelegate: AnyObject {

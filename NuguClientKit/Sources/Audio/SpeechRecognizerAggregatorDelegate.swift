@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguAgents
+import NuguAgentsExternal
 
 public protocol SpeechRecognizerAggregatorDelegate: AnyObject {
     func speechRecognizerStateDidChange(_ state: SpeechRecognizerAggregatorState)

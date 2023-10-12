@@ -21,7 +21,7 @@
 import Foundation
 import MediaPlayer
 
-import NuguAgents
+import NuguAgentsExternal
 import NuguUIKitExternal
 
 public final class ControlCenterManager {

@@ -9,7 +9,7 @@
 import Foundation
 
 import NuguUtils
-import NuguAgents
+import NuguAgentsExternal
 
 public enum SpeechRecognizerAggregatorState: Equatable {
     case idle

@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguAgents
+import NuguAgentsExternal
 import NuguCore
 
 public protocol SpeechRecognizerAggregatable: AnyObject {

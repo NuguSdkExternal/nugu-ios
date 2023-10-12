@@ -19,7 +19,7 @@
 
 import UIKit
 
-import NuguAgents
+import NuguAgentsExternal
 
 final class DisplayTitleView: UIView {
     @IBOutlet weak var titleContainerView: UIView!

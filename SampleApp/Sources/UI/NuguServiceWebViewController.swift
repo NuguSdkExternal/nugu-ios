@@ -22,7 +22,7 @@ import UIKit
 import SafariServices
 
 import NuguServiceKit
-import NuguAgents
+import NuguAgentsExternal
 
 final class NuguServiceWebViewController: UIViewController {
     var initialURLString: String?

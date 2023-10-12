@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'NuguUIKit/Sources/**/*.{swift}'
 
-  s.dependency 'NuguAgents', '1.7.9'
+  s.dependency 'NuguAgentsExternal', '1.7.10-beta.3'
   s.dependency 'NuguUtils', '1.7.9'
   
   s.dependency 'NattyLog', '~> 1'

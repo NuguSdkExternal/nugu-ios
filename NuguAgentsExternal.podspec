@@ -1,15 +1,15 @@
 Pod::Spec.new do |s|
-  s.name = 'NuguAgents'
-  s.version = '1.7.9'
+  s.name = 'NuguAgentsExternal'
+  s.version = '1.7.10-beta.3'
   s.license = 'Apache License, Version 2.0'
   s.summary = 'Nugu Agents'
   s.description = <<-DESC
 Default Agent Implementations for Nugu service
                        DESC
 
-  s.homepage = 'https://github.com/nugu-developers/nugu-ios'
+  s.homepage = 'https://github.com/NuguSdkExternal/nugu-ios'
   s.author = { 'SK Telecom Co., Ltd.' => 'nugu_dev_sdk@sk.com' }
-  s.source = { :git => 'https://github.com/nugu-developers/nugu-ios.git', :tag => s.version.to_s }
+  s.source = { :git => 'https://github.com/NuguSdkExternal/nugu-ios.git', :tag => s.version.to_s }
   s.documentation_url = 'https://developers.nugu.co.kr'
 
   s.ios.deployment_target = '12.0'
@@ -17,11 +17,11 @@ Default Agent Implementations for Nugu service
 
   s.source_files = 'NuguAgents/Sources/**/*'
   
-  s.dependency 'NuguCore', s.version.to_s
-  s.dependency 'NuguUtils', s.version.to_s
-  s.dependency 'SilverTray', s.version.to_s
+  s.dependency 'NuguCore', '1.7.9'
+  s.dependency 'NuguUtils', '1.7.9'
+  s.dependency 'SilverTray', '1.7.9'
   s.dependency 'NattyLog', '~> 1'
-  s.ios.dependency 'JadeMarble', s.version.to_s
+  s.ios.dependency 'JadeMarble', '1.7.9'
   
   s.xcconfig = {
     'OTHER_SWIFT_FLAGS' => '-DDEPLOY_OTHER_PACKAGE_MANAGER'

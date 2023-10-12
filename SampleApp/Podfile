@@ -9,7 +9,7 @@ target 'SampleApp' do
   pod 'TycheSDK', :path => '../'
   pod 'JadeMarble', :path => '../'
   pod 'KeenSense', :path => '../'
-  pod 'NuguAgents', :path => '../'
+  pod 'NuguAgentsExternal', :path => '../'
   pod 'NuguCore', :path => '../'
   pod 'NuguUtils', :path => '../'
   pod 'NuguObjcUtils', :path => '../'

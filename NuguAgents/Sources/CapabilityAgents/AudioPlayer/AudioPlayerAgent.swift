@@ -487,7 +487,7 @@ private extension AudioPlayerAgent {
                 if let currentPlayer = self.currentPlayer,
                    player.shouldResume(player: currentPlayer) {
                     log.info("Resuming \(player.header.messageId)")
-                    currentPlayer.stop()
+                    currentPlayer.resume()
                     player.replacePlayer(currentPlayer)
                 }
                 self.currentPlayer = player

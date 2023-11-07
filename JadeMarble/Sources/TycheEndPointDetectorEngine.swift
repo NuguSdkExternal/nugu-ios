@@ -194,14 +194,17 @@ public class TycheEndPointDetectorEngine {
             epdClientChannelRELEASE(engineHandle)
         }
         
+        let modelName = "skt_epd_model"
+        let appModelPath = Bundle.main.url(forResource: modelName, withExtension: "raw")?.path
+        
         #if DEPLOY_OTHER_PACKAGE_MANAGER
-        let modelPath = Bundle(for: TycheEndPointDetectorEngine.self).url(forResource: "skt_epd_model", withExtension: "raw")!.path
+        let defalutModelPath = Bundle(for: TycheEndPointDetectorEngine.self).url(forResource: modelName, withExtension: "raw")!.path
         #else
-        let modelPath = Bundle.module.url(forResource: "skt_epd_model", withExtension: "raw")!.path
+        let defalutModelPath = Bundle.module.url(forResource: modelName, withExtension: "raw")!.path
         #endif
         
         guard let epdHandle = epdClientChannelSTART(
-            modelPath,
+            appModelPath ?? defalutModelPath,
             myint(sampleRate),
             myint(EndPointDetectorConst.inputStreamType.rawValue),
             myint(EndPointDetectorConst.outputStreamType.rawValue),

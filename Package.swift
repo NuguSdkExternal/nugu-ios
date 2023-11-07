@@ -57,7 +57,7 @@ let package = Package(
             publicHeadersPath: "include/"
         ),
         .target(
-            name: "JadeMarble",
+            name: "JadeMarbleExternal",
             dependencies: ["NattyLog", "TycheSDK", "TycheCommon", "TycheEpd", "TycheSpeex"],
             path: "JadeMarble/",
             exclude: ["Info.plist"],
@@ -103,7 +103,7 @@ let package = Package(
         ),
         .target(
             name: "NuguAgentsExternal",
-            dependencies: ["NuguUtils", "NuguCore", "JadeMarble", "KeenSense", "RxSwift", "NattyLog", "SilverTray"],
+            dependencies: ["NuguUtils", "NuguCore", "JadeMarbleExternal", "KeenSense", "RxSwift", "NattyLog", "SilverTray"],
             path: "NuguAgents/",
             exclude: ["Info.plist", "README.md"]
         ),

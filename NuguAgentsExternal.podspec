@@ -21,7 +21,7 @@ Default Agent Implementations for Nugu service
   s.dependency 'NuguUtils', '1.7.9'
   s.dependency 'SilverTray', '1.7.9'
   s.dependency 'NattyLog', '~> 1'
-  s.ios.dependency 'JadeMarble', '1.7.9'
+  s.ios.dependency 'JadeMarbleExternal', '1.7.11'
   
   s.xcconfig = {
     'OTHER_SWIFT_FLAGS' => '-DDEPLOY_OTHER_PACKAGE_MANAGER'

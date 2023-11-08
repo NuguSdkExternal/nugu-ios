@@ -123,18 +123,26 @@ public enum Keyword: CustomStringConvertible, CaseIterable {
         #if DEPLOY_OTHER_PACKAGE_MANAGER
         switch self {
         case .aria:
-            return Bundle(for: TycheKeywordDetectorEngine.self).url(forResource: "skt_trigger_am_aria", withExtension: "raw")!.path
+            let appModelPath = Bundle.main.url(forResource: "skt_trigger_am_aria", withExtension: "raw")?.path
+            let defaultModelPath = Bundle(for: TycheKeywordDetectorEngine.self).url(forResource: "skt_trigger_am_aria", withExtension: "raw")!.path
+            return appModelPath ?? defaultModelPath
         case .tinkerbell:
-            return Bundle(for: TycheKeywordDetectorEngine.self).url(forResource: "skt_trigger_am_tinkerbell", withExtension: "raw")!.path
+            let appModelPath = Bundle.main.url(forResource: "skt_trigger_am_tinkerbell", withExtension: "raw")?.path
+            let defaultModelPath = Bundle(for: TycheKeywordDetectorEngine.self).url(forResource: "skt_trigger_am_tinkerbell", withExtension: "raw")!.path
+            return appModelPath ?? defaultModelPath
         case .custom(_, let netFilePath, _):
             return netFilePath
         }
         #else
         switch self {
         case .aria:
-            return Bundle.module.url(forResource: "skt_trigger_am_aria", withExtension: "raw")!.path
+            let appModelPath = Bundle.main.url(forResource: "skt_trigger_am_aria", withExtension: "raw")?.path
+            let defaultModelPath = Bundle.module.url(forResource: "skt_trigger_am_aria", withExtension: "raw")!.path
+            return appModelPath ?? defaultModelPath
         case .tinkerbell:
-            return Bundle.module.url(forResource: "skt_trigger_am_tinkerbell", withExtension: "raw")!.path
+            let appModelPath = Bundle.main.url(forResource: "skt_trigger_am_tinkerbell", withExtension: "raw")?.path
+            let defaultModelPath = Bundle.module.url(forResource: "skt_trigger_am_tinkerbell", withExtension: "raw")!.path
+            return appModelPath ?? defaultModelPath
         case .custom(_, let netFilePath, _):
             return netFilePath
         }
@@ -145,18 +153,26 @@ public enum Keyword: CustomStringConvertible, CaseIterable {
         #if DEPLOY_OTHER_PACKAGE_MANAGER
         switch self {
         case .aria:
-            return Bundle(for: TycheKeywordDetectorEngine.self).url(forResource: "skt_trigger_search_aria", withExtension: "raw")!.path
+            let appModelPath = Bundle.main.url(forResource: "skt_trigger_search_aria", withExtension: "raw")?.path
+            let defaultModelPath = Bundle(for: TycheKeywordDetectorEngine.self).url(forResource: "skt_trigger_search_aria", withExtension: "raw")!.path
+            return appModelPath ?? defaultModelPath
         case .tinkerbell:
-            return Bundle(for: TycheKeywordDetectorEngine.self).url(forResource: "skt_trigger_search_tinkerbell", withExtension: "raw")!.path
+            let appModelPath = Bundle.main.url(forResource: "skt_trigger_search_tinkerbell", withExtension: "raw")?.path
+            let defaultModelPath = Bundle(for: TycheKeywordDetectorEngine.self).url(forResource: "skt_trigger_search_tinkerbell", withExtension: "raw")!.path
+            return appModelPath ?? defaultModelPath
         case .custom(_, _, let searchFilePath):
             return searchFilePath
         }
         #else
         switch self {
         case .aria:
-            return Bundle.module.url(forResource: "skt_trigger_search_aria", withExtension: "raw")!.path
+            let appModelPath = Bundle.main.url(forResource: "skt_trigger_search_aria", withExtension: "raw")?.path
+            let defaultModelPath = Bundle(for: TycheKeywordDetectorEngine.self).url(forResource: "skt_trigger_search_aria", withExtension: "raw")!.path
+            return appModelPath ?? defaultModelPath
         case .tinkerbell:
-            return Bundle.module.url(forResource: "skt_trigger_search_tinkerbell", withExtension: "raw")!.path
+            let appModelPath = Bundle.main.url(forResource: "skt_trigger_search_tinkerbell", withExtension: "raw")?.path
+            let defaultModelPath = Bundle(for: TycheKeywordDetectorEngine.self).url(forResource: "skt_trigger_search_tinkerbell", withExtension: "raw")!.path
+            return appModelPath ?? defaultModelPath
         case .custom(_, _, let searchFilePath):
             return searchFilePath
         }

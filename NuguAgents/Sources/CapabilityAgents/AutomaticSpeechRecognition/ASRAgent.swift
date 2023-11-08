@@ -23,7 +23,7 @@ import AVFoundation
 
 import NuguCore
 import NuguUtils
-import JadeMarble
+import JadeMarbleExternal
 
 import RxSwift
 

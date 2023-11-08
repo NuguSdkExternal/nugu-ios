@@ -12,13 +12,13 @@ let package = Package(
         .library(
             name: "nugu-ios",
             type: .dynamic,
-            targets: ["NuguClientKitExternal", "NuguAgentsExternal", "NuguUtils", "NuguServiceKit", "NuguLoginKit", "NuguUIKitExternal", "KeenSense", "NuguCore"]
+            targets: ["NuguClientKitExternal", "NuguAgentsExternal", "NuguUtils", "NuguServiceKit", "NuguLoginKit", "NuguUIKitExternal", "KeenSenseExternal", "NuguCore"]
         )
     ],
     dependencies: [
         .package(name: "RxSwift", url: "https://github.com/ReactiveX/RxSwift", from: "6.0.0"),
         .package(name: "NattyLog", url: "https://github.com/nugu-developers/natty-log-ios", from: "1.2.2"),
-	.package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios", .upToNextMajor(from: "3.0.0")) // 4.0.0 ~ 4.X.X
+	.package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios", .upToNextMajor(from: "4.0.0")) // 4.0.0 ~ 4.X.X
     ],
     targets: [
         .target(
@@ -57,7 +57,7 @@ let package = Package(
             publicHeadersPath: "include/"
         ),
         .target(
-            name: "JadeMarble",
+            name: "JadeMarbleExternal",
             dependencies: ["NattyLog", "TycheSDK", "TycheCommon", "TycheEpd", "TycheSpeex"],
             path: "JadeMarble/",
             exclude: ["Info.plist"],
@@ -65,7 +65,7 @@ let package = Package(
             linkerSettings: [.linkedLibrary("c++")]
         ),
         .target(
-            name: "KeenSense",
+            name: "KeenSenseExternal",
             dependencies: ["NattyLog", "NuguUtils", "TycheSDK"],
             path: "KeenSense/",
             exclude: ["Info.plist"],
@@ -103,7 +103,7 @@ let package = Package(
         ),
         .target(
             name: "NuguAgentsExternal",
-            dependencies: ["NuguUtils", "NuguCore", "JadeMarble", "KeenSense", "RxSwift", "NattyLog", "SilverTray"],
+            dependencies: ["NuguUtils", "NuguCore", "JadeMarbleExternal", "KeenSenseExternal", "RxSwift", "NattyLog", "SilverTray"],
             path: "NuguAgents/",
             exclude: ["Info.plist", "README.md"]
         ),
@@ -137,7 +137,7 @@ let package = Package(
         ),
         .target(
             name: "NuguClientKitExternal",
-            dependencies: ["NuguAgentsExternal", "NattyLog", "RxSwift", "NuguUtils", "NuguServiceKit", "NuguLoginKit", "NuguUIKitExternal", "KeenSense", "NuguCore"],
+            dependencies: ["NuguAgentsExternal", "NattyLog", "RxSwift", "NuguUtils", "NuguServiceKit", "NuguLoginKit", "NuguUIKitExternal", "KeenSenseExternal", "NuguCore"],
             path: "NuguClientKit/",
             exclude: ["Info.plist", "README.md"]
         ),

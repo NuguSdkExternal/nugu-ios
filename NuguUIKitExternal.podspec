@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'NuguUIKitExternal'
-  s.version = '1.7.10-beta.3'
+  s.version = '1.7.11-beta.1'
   s.license = 'Apache License, Version 2.0'
   s.summary = 'UI Set of Nugu Service'
   s.description = <<-DESC
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'NuguUIKit/Sources/**/*.{swift}'
 
-  s.dependency 'NuguAgentsExternal', '1.7.10-beta.3'
+  s.dependency 'NuguAgentsExternal', '1.7.11-beta.1'
   s.dependency 'NuguUtils', '1.7.9'
   
   s.dependency 'NattyLog', '~> 1'

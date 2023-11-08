@@ -23,9 +23,9 @@ import AVFoundation
 
 import NuguUtils
 import NuguCore
-import KeenSense
+import KeenSenseExternal
 
-public typealias Keyword = KeenSense.Keyword
+public typealias Keyword = KeenSenseExternal.Keyword
 
 /// <#Description#>
 public class KeywordDetector: ContextInfoProvidable {

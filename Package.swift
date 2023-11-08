@@ -12,7 +12,7 @@ let package = Package(
         .library(
             name: "nugu-ios",
             type: .dynamic,
-            targets: ["NuguClientKitExternal", "NuguAgentsExternal", "NuguUtils", "NuguServiceKit", "NuguLoginKit", "NuguUIKitExternal", "KeenSense", "NuguCore"]
+            targets: ["NuguClientKitExternal", "NuguAgentsExternal", "NuguUtils", "NuguServiceKit", "NuguLoginKit", "NuguUIKitExternal", "KeenSenseExternal", "NuguCore"]
         )
     ],
     dependencies: [
@@ -65,7 +65,7 @@ let package = Package(
             linkerSettings: [.linkedLibrary("c++")]
         ),
         .target(
-            name: "KeenSense",
+            name: "KeenSenseExternal",
             dependencies: ["NattyLog", "NuguUtils", "TycheSDK"],
             path: "KeenSense/",
             exclude: ["Info.plist"],
@@ -103,7 +103,7 @@ let package = Package(
         ),
         .target(
             name: "NuguAgentsExternal",
-            dependencies: ["NuguUtils", "NuguCore", "JadeMarbleExternal", "KeenSense", "RxSwift", "NattyLog", "SilverTray"],
+            dependencies: ["NuguUtils", "NuguCore", "JadeMarbleExternal", "KeenSenseExternal", "RxSwift", "NattyLog", "SilverTray"],
             path: "NuguAgents/",
             exclude: ["Info.plist", "README.md"]
         ),
@@ -137,7 +137,7 @@ let package = Package(
         ),
         .target(
             name: "NuguClientKitExternal",
-            dependencies: ["NuguAgentsExternal", "NattyLog", "RxSwift", "NuguUtils", "NuguServiceKit", "NuguLoginKit", "NuguUIKitExternal", "KeenSense", "NuguCore"],
+            dependencies: ["NuguAgentsExternal", "NattyLog", "RxSwift", "NuguUtils", "NuguServiceKit", "NuguLoginKit", "NuguUIKitExternal", "KeenSenseExternal", "NuguCore"],
             path: "NuguClientKit/",
             exclude: ["Info.plist", "README.md"]
         ),

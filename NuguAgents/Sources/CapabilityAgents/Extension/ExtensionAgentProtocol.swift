@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 /// `ExtensionAgent` handles directives that not defined by other capability-agents
 public protocol ExtensionAgentProtocol: CapabilityAgentable {

@@ -20,7 +20,7 @@
 
 import AVFoundation
 
-import NuguCore
+import NuguCoreExternal
 
 // MARK: LocalTTSPlayer
 

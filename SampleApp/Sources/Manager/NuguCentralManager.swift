@@ -20,7 +20,7 @@
 
 import UIKit
 
-import NuguCore
+import NuguCoreExternal
 import NuguAgentsExternal
 import NuguClientKitExternal
 import NuguLoginKit

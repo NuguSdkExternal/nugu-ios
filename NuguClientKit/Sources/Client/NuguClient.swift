@@ -21,7 +21,7 @@
 import Foundation
 import AVFoundation
 
-import NuguCore
+import NuguCoreExternal
 import NuguAgentsExternal
 
 /// <#Description#>

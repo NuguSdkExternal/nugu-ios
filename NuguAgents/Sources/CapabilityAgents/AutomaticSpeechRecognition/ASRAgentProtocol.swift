@@ -21,7 +21,7 @@
 import Foundation
 import AVFoundation
 
-import NuguCore
+import NuguCoreExternal
 import NuguUtils
 
 /// ASR (AutomaticSpeechRecognition) is responsible for capturing the audio and delivering it to the server and receiving the result of speech recognition.

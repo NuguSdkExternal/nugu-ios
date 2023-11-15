@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 /// `TextAgent` is needed to send event-based text recognition.
 public protocol TextAgentProtocol: CapabilityAgentable {

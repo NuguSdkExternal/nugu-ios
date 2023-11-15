@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 public struct EventIdentifier: Equatable {
     public let dialogRequestId: String

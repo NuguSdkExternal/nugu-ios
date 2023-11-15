@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 public typealias HistoryControl = DisplayHistoryControl.HistoryControl
 

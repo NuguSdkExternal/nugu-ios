@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 extension Attachable {
     // swiftlint:disable function_parameter_count

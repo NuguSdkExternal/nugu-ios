@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 /// An delegate that appllication can extend to provide sound data.
 public protocol SoundAgentDataSource: AnyObject {

@@ -10,7 +10,7 @@ target 'SampleApp' do
   pod 'JadeMarbleExternal', :path => '../'
   pod 'KeenSenseExternal', :path => '../'
   pod 'NuguAgentsExternal', :path => '../'
-  pod 'NuguCore', :path => '../'
+  pod 'NuguCoreExternal', :path => '../'
   pod 'NuguUtils', :path => '../'
   pod 'NuguObjcUtils', :path => '../'
   pod 'NuguServiceKit', :path => '../'

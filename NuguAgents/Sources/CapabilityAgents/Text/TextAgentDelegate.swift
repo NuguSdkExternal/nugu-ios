@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 /// The `TextAgentDelegate` protocol defines method that changed state or received result.
 ///

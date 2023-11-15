@@ -21,7 +21,7 @@
 import Foundation
 import UIKit
 
-import NuguCore
+import NuguCoreExternal
 import NuguServiceKit
 import NuguUtils
 

@@ -23,7 +23,7 @@ import UIKit
 import AVFoundation
 
 import NuguAgentsExternal
-import NuguCore
+import NuguCoreExternal
 import NuguUtils
 
 public class SpeechRecognizerAggregator: SpeechRecognizerAggregatable {

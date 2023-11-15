@@ -21,7 +21,7 @@
 import Foundation
 
 import NuguAgentsExternal
-import NuguCore
+import NuguCoreExternal
 
 public protocol SpeechRecognizerAggregatable: AnyObject {
     var delegate: SpeechRecognizerAggregatorDelegate? { get set }

@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 /// The `PermissionAgentDelegate` protocol defines methods that a delegate of a `PermissionAgent` object can implement to receive directives or request context.
 public protocol PermissionAgentDelegate: AnyObject {

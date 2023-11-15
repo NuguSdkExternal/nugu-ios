@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 import NuguUtils
 
 /// The `TTSAgent` handles directives for controlling speech playback.

@@ -20,7 +20,7 @@
 
 import AVFoundation
 
-import NuguCore
+import NuguCoreExternal
 
 final class ASRBeepPlayer {
     static var isStartBeepEnabled: Bool = true

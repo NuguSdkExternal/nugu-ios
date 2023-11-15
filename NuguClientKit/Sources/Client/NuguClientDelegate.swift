@@ -20,14 +20,14 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 import NuguAgentsExternal
 
 public typealias Directive = Downstream.Directive
 public typealias DirectiveAttachment = Downstream.Attachment
 public typealias Event = Upstream.Event
 public typealias EventAttachment = Upstream.Attachment
-public typealias ServerSideEventReceiverState = NuguCore.ServerSideEventReceiverState
+public typealias ServerSideEventReceiverState = NuguCoreExternal.ServerSideEventReceiverState
 
 public protocol NuguClientDelegate: AnyObject {
     // authorization related

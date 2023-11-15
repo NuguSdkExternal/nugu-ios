@@ -24,7 +24,7 @@ import WebKit
 
 import NuguAgentsExternal
 import NuguUIKitExternal
-import NuguCore
+import NuguCoreExternal
 import NuguUtils
 
 /// DisplayWebViewPresenter is a class which helps user for displaying DisplayWebView more easily.

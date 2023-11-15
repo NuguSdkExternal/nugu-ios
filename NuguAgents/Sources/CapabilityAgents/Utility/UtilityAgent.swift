@@ -19,7 +19,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 public class UtilityAgent: UtilityAgentProtocol {
     public var capabilityAgentProperty: CapabilityAgentProperty = CapabilityAgentProperty(category: .utility, version: "1.0")

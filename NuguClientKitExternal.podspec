@@ -18,7 +18,7 @@ Default Instances for Nugu service
   s.source_files = 'NuguClientKit/Sources/**/*', 'NuguClientKit/Sources-ObjC/*.{h,m}', 'NuguClientKit/NuguClientKit.h'
   s.public_header_files = 'NuguClientKit/Sources-ObjC/*.h', 'NuguClientKit/NuguClientKit.h'
 
-  s.dependency 'NuguCore', '1.7.9'
+  s.dependency 'NuguCoreExternal', '1.7.11-beta.2'
   s.dependency 'NuguAgentsExternal', '1.7.11-beta.1'
   s.dependency 'KeenSenseExternal', '1.7.11-beta.1'
   s.dependency 'NuguLoginKit', '1.7.9'

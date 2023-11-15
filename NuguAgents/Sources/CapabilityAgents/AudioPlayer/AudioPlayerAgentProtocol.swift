@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 import NuguUtils
 
 /// The `AudioPlayerAgent` handles directives for controlling audio playback.

@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 /// `MessageAgent` handles directives for message.
 public protocol MessageAgentProtocol: CapabilityAgentable {

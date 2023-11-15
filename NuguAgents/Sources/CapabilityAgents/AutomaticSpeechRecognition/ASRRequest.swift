@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 struct ASRRequest {
     let eventIdentifier: EventIdentifier

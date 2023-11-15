@@ -24,7 +24,7 @@ import UIKit
 import NuguAgentsExternal
 import NuguUIKitExternal
 import NuguUtils
-import NuguCore
+import NuguCoreExternal
 
 /// `VoiceChromePresenter` is a class which helps user for displaying `NuguVoiceChrome` more easily.
 public class VoiceChromePresenter: NSObject {

@@ -19,7 +19,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 public extension Eventable {
     func makeEventMessage(

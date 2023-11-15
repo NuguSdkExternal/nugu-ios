@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 /// The `DisplayAgent` handles directives for controlling template display.
 public protocol DisplayAgentProtocol: CapabilityAgentable {

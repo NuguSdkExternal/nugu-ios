@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 public final class LocationAgent: LocationAgentProtocol {
     // CapabilityAgentable

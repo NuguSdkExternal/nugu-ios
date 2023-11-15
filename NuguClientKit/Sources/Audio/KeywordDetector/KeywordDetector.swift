@@ -22,7 +22,7 @@ import Foundation
 import AVFoundation
 
 import NuguUtils
-import NuguCore
+import NuguCoreExternal
 import KeenSenseExternal
 
 public typealias Keyword = KeenSenseExternal.Keyword

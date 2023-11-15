@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 /// The `ExtensionAgentDelegate` protocol defines methods that action when `ExtensionAgent` receives a directive.
 ///

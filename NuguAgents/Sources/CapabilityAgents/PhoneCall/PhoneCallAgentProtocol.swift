@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 /// `PhoneCallAgent` handles directives for phone-call.
 public protocol PhoneCallAgentProtocol: CapabilityAgentable {

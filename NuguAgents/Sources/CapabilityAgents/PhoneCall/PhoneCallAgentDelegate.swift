@@ -20,7 +20,7 @@
 
 import Foundation
 
-import NuguCore
+import NuguCoreExternal
 
 /// The `PhoneCallAgentDelegate` protocol defines methods that a delegate of a `PhoneCallAgent` object can implement to receive directives or request context.
 public protocol PhoneCallAgentDelegate: AnyObject {

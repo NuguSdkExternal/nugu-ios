@@ -23,7 +23,7 @@ import UIKit
 
 import NuguAgentsExternal
 import NuguUIKitExternal
-import NuguCore
+import NuguCoreExternal
 import NuguUtils
 
 /// AudioDisplayViewPresenter is a class which helps user for displaying AudioDisplayView more easily.

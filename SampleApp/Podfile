@@ -2,18 +2,4 @@ platform :ios, '12.0'
 
 target 'SampleApp' do
   use_frameworks!
-
-  pod 'NuguClientKitExternal', :path => '../'
-  pod 'NuguUIKitExternal', :path => '../'
-  pod 'NuguLoginKit', :path => '../'
-  pod 'TycheSDK', :path => '../'
-  pod 'JadeMarbleExternal', :path => '../'
-  pod 'KeenSenseExternal', :path => '../'
-  pod 'NuguAgentsExternal', :path => '../'
-  pod 'NuguCoreExternal', :path => '../'
-  pod 'NuguUtils', :path => '../'
-  pod 'NuguObjcUtils', :path => '../'
-  pod 'NuguServiceKit', :path => '../'
-  pod 'OpusSDK', :path => '../'
-  pod 'SilverTray', :path => '../'
 end

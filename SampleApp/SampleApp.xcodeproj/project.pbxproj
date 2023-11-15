@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,7 +33,23 @@
 		7ECD3DEF24F64605007F29CE /* listening_end.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD3DEC24F64605007F29CE /* listening_end.wav */; };
 		7ECD3DF024F64605007F29CE /* listening_start.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD3DED24F64605007F29CE /* listening_start.wav */; };
 		A2686CF3CD6360752FF9426B /* Pods_SampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E35ABD8543680F9A99E41F6 /* Pods_SampleApp.framework */; };
+		E006A0C02B049975001CFF52 /* nugu-ios in Frameworks */ = {isa = PBXBuildFile; productRef = E006A0BF2B049975001CFF52 /* nugu-ios */; };
+		E006A0C12B049989001CFF52 /* nugu-ios in Embed Frameworks */ = {isa = PBXBuildFile; productRef = E006A0BF2B049975001CFF52 /* nugu-ios */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E006A0C22B049989001CFF52 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E006A0C12B049989001CFF52 /* nugu-ios in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1E35ABD8543680F9A99E41F6 /* Pods_SampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2686CF3CD6360752FF9426B /* Pods_SampleApp.framework in Frameworks */,
+				E006A0C02B049975001CFF52 /* nugu-ios in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,13 +274,16 @@
 				73F2841C238157A7004EBBDF /* Sources */,
 				73F2841D238157A7004EBBDF /* Frameworks */,
 				73F2841E238157A7004EBBDF /* Resources */,
-				1E05D1ACEE891928C598875C /* [CP] Embed Pods Frameworks */,
+				E006A0C22B049989001CFF52 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SampleApp;
+			packageProductDependencies = (
+				E006A0BF2B049975001CFF52 /* nugu-ios */,
+			);
 			productName = SampleApp;
 			productReference = 73F28420238157A7004EBBDF /* SampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -292,6 +312,9 @@
 				Base,
 			);
 			mainGroup = 73F28417238157A7004EBBDF;
+			packageReferences = (
+				E006A0BE2B049975001CFF52 /* XCLocalSwiftPackageReference ".." */,
+			);
 			productRefGroup = 73F28421238157A7004EBBDF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -324,23 +347,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1E05D1ACEE891928C598875C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleApp/Pods-SampleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleApp/Pods-SampleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleApp/Pods-SampleApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		520334D3A2C2681C4E60F4E7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -531,17 +537,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Supporting Files/SampleApp.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QUEYTE2JMS;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = N7PP22U8X7;
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sktelecom.romaine.SampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skt.auto.nugusdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Auto_Wildcard_dev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -554,17 +563,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Supporting Files/SampleApp.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QUEYTE2JMS;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = N7PP22U8X7;
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sktelecom.romaine.SampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skt.auto.nugusdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Auto_Wildcard_dev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -592,6 +604,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		E006A0BE2B049975001CFF52 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E006A0BF2B049975001CFF52 /* nugu-ios */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "nugu-ios";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 73F28418238157A7004EBBDF /* Project object */;
 }

@@ -43,7 +43,7 @@ public extension NuguServiceWebView {
             "Authorization": token,
             "Os-Type-Code": "MBL_IOS",
             "App-Version": Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "",
-            "Sdk-Version": Bundle(identifier: "com.sktelecom.romaine.NuguServiceKit")?.infoDictionary?["CFBundleShortVersionString"] as? String ?? "",
+            "Sdk-Version": nuguSDKVersion,
             "Poc-Id": configuration.pocId,
             "Phone-Model-Name": UIDevice.current.model,
             "Theme": "LIGHT",

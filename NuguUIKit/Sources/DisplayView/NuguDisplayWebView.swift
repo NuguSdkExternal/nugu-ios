@@ -237,7 +237,7 @@ public extension NuguDisplayWebView {
             clientInfo?.merge(newClientInfo)
         }
         var defaultClientInfo = [String: String]()
-        defaultClientInfo["nuguSdkVersion"] = Bundle(for: NuguDisplayWebView.self).object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0"
+        defaultClientInfo["nuguSdkVersion"] = nuguSDKVersion
         defaultClientInfo["osType"] = "IOS"
         if let clientInfo = clientInfo {
             defaultClientInfo.merge(clientInfo)
@@ -284,7 +284,7 @@ private extension NuguDisplayWebView {
         displayRequestBodyParam["dialog_request_id"] = dialogRequestId
         
         var defaultClientInfo = [String: String]()
-        defaultClientInfo["nuguSdkVersion"] = Bundle(for: NuguDisplayWebView.self).object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0"
+        defaultClientInfo["nuguSdkVersion"] = nuguSDKVersion
         defaultClientInfo["osType"] = "IOS"
         if let clientInfo = clientInfo {
             defaultClientInfo.merge(clientInfo)

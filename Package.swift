@@ -11,7 +11,6 @@ let package = Package(
     products: [
         .library(
             name: "nugu-ios",
-            type: .dynamic,
             targets: ["NuguClientKitExternal", "NuguAgentsExternal", "NuguUtils", "NuguServiceKit", "NuguLoginKit", "NuguUIKitExternal", "KeenSenseExternal", "NuguCoreExternal"]
         )
     ],

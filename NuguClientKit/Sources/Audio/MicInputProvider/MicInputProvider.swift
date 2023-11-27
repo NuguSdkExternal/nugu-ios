@@ -108,7 +108,7 @@ public class MicInputProvider {
     }
     
     private func beginTappingMicrophone(tapBlock: @escaping AVAudioNodeTapBlock) throws {
-        log.debug("begin tapping to engine's input node")
+        log.debug("### begin tapping to engine's input node")
         
         var inputNode: AVAudioInputNode!
         var inputFormat: AVAudioFormat!

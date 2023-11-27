@@ -24,7 +24,7 @@ import AVFoundation
 import TycheSDK
 
 public class TycheEndPointDetectorEngine {
-    private let epdQueue = DispatchQueue(label: "com.sktelecom.romaine.jademarble.tyche_end_point_detector")
+    private let epdQueue = DispatchQueue(label: "com.sktelecom.romaine.jademarble.tyche_end_point_detector", qos: .userInteractive)
     private var flushedLength: Int = 0
     private var flushLength: Int = 0
     private var engineHandle: EpdHandle?
@@ -91,6 +91,8 @@ public class TycheEndPointDetectorEngine {
     
     public func putAudioBuffer(buffer: AVAudioPCMBuffer) {
         log.debug("### putAudioBuffer")
+        log.debug("### Thread.current.isMainThread: \(Thread.current.isMainThread)")
+        log.debug("### Thread.isMainThread: \(Thread.isMainThread)")
         epdQueue.async { [weak self] in
             guard let self = self else { return }
             guard let ptrPcmData = buffer.int16ChannelData?.pointee,
@@ -99,6 +101,7 @@ public class TycheEndPointDetectorEngine {
                 return
             }
 
+            log.debug("### Thread.current.name: \(Thread.current)")
             let engineState = ptrPcmData.withMemoryRebound(to: UInt8.self, capacity: Int(buffer.frameLength*2)) { (ptrData) -> Int32 in
                 #if DEBUG
                 self.inputData.append(ptrData, count: Int(buffer.frameLength)*2)
@@ -130,13 +133,16 @@ public class TycheEndPointDetectorEngine {
             guard 0 <= engineState else { return }
             
             let length = epdClientChannelGetOutputDataSize(self.engineHandle)
+            log.debug("### length: \(length)")
             if 0 < length {
                 let detectedBytes = UnsafeMutablePointer<Int8>.allocate(capacity: Int(length))
                 defer { detectedBytes.deallocate() }
                 
                 let result = epdClientChannelGetOutputData(self.engineHandle, detectedBytes, length)
+                log.debug("### result: \(result)")
                 if 0 < result {
                     let detectedData = Data(bytes: detectedBytes, count: Int(result))
+                    log.debug("### self.delegate?.tycheEndPointDetectorEngineDidExtract(speechData: detectedData)")
                     self.delegate?.tycheEndPointDetectorEngineDidExtract(speechData: detectedData)
                     
                     #if DEBUG
@@ -159,8 +165,6 @@ public class TycheEndPointDetectorEngine {
                                                                  in: .userDomainMask)[0].appendingPathComponent("jade_marble_output.speex")
                     log.debug("speex data file :\(speexFileName)")
                     try self.outputData.write(to: speexFileName)
-                    
-                    
                     
                     self.inputData.removeAll()
                     self.outputData.removeAll()

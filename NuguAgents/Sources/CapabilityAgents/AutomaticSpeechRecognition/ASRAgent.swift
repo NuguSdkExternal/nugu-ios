@@ -381,17 +381,18 @@ extension ASRAgent: EndPointDetectorDelegate {
     }
     
     func endPointDetectorSpeechDataExtracted(speechData: Data) {
+        log.info("### endPointDetectorSpeechDataExtracted")
         asrDispatchQueue.async { [weak self] in
             guard let self = self else { return }
             guard let asrRequest = self.asrRequest  else {
-                log.warning("ASRRequest not exist")
+                log.warning("### ASRRequest not exist")
                 return
             }
             switch self.asrState {
             case .listening, .recognizing:
                 break
             case .idle, .expectingSpeech, .busy:
-                log.warning("Not permitted in current state \(self.asrState)")
+                log.warning("### Not permitted in current state \(self.asrState)")
                 return
             }
             
@@ -403,6 +404,7 @@ extension ASRAgent: EndPointDetectorDelegate {
                 isEnd: false,
                 speechData: speechData
             )
+            log.info("### self.upstreamDataSender.sendStream(attachment)")
             self.upstreamDataSender.sendStream(attachment)
             self.attachmentSeq += 1
             log.debug("request seq: \(self.attachmentSeq-1)")

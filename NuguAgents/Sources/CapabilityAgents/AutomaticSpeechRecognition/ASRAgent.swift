@@ -62,8 +62,8 @@ public final class ASRAgent: ASRAgentProtocol {
     public var options: ASROptions = ASROptions(endPointing: .client)
     private(set) public var asrState: ASRState = .idle {
         didSet {
-            log.info("From:\(oldValue) To:\(asrState)")
-            
+            log.info("### From:\(oldValue) To:\(asrState)")
+                        
             // `ASRRequest` -> `FocusState` -> EndPointDetector` -> `ASRAgentDelegate`
             // release asrRequest
             if asrState == .idle {
@@ -73,6 +73,7 @@ public final class ASRAgent: ASRAgentProtocol {
             
             // Stop EPD
             if [.listening(), .recognizing].contains(asrState) == false {
+                log.info("### endPointDetector?.stop()")
                 endPointDetector?.stop()
                 endPointDetector?.delegate = nil
                 endPointDetector = nil

@@ -59,7 +59,7 @@ public class TycheEndPointDetectorEngine {
         maxDuration: Int,
         pauseLength: Int
     ) {
-        log.debug("engine try to start")
+        log.debug("### engine try to start")
         
         epdQueue.async { [weak self] in
             guard let self = self else { return }
@@ -80,6 +80,7 @@ public class TycheEndPointDetectorEngine {
                 self.state = .listening
                 self.flushedLength = 0
                 self.flushLength = Int((Double(self.flushTime) * sampleRate) / 1000)
+                 log.debug("### flushLength: \(flushLength) / flushTime: \(self.flushTime) / sampleRate: \(sampleRate)")
             } catch {
                 self.state = .idle
                 log.error("engine init error: \(error)")
@@ -89,6 +90,7 @@ public class TycheEndPointDetectorEngine {
     }
     
     public func putAudioBuffer(buffer: AVAudioPCMBuffer) {
+        log.debug("### putAudioBuffer")
         epdQueue.async { [weak self] in
             guard let self = self else { return }
             guard let ptrPcmData = buffer.int16ChannelData?.pointee,
@@ -104,14 +106,18 @@ public class TycheEndPointDetectorEngine {
                 
                 // Calculate flushed audio frame length.
                 var adjustLength = 0
+                log.debug("### flushLength: \(self.flushLength) / flushedLength: \(self.flushedLength) / buffer.frameLength: \(Int(buffer.frameLength))")
+
                 if self.flushedLength + Int(buffer.frameLength) <= self.flushLength {
+                    log.debug("### [1] self.flushedLength + Int(buffer.frameLength) <= self.flushLength")
                     self.flushedLength += Int(buffer.frameLength)
                     return -1
                 } else if self.flushedLength < self.flushLength {
+                    log.debug("### [2] self.flushedLength < self.flushLength")
                     self.flushedLength += Int(buffer.frameLength)
                     adjustLength = Int(buffer.frameLength) - (self.flushedLength - self.flushLength)
                 }
-                
+                log.debug("### adjustLength: \(adjustLength)")                
                 return epdClientChannelRUN(
                     self.engineHandle,
                     ptrData,
@@ -119,6 +125,8 @@ public class TycheEndPointDetectorEngine {
                     0
                 )
             }
+            log.debug("### engineState: \(engineState)")
+
             guard 0 <= engineState else { return }
             
             let length = epdClientChannelGetOutputDataSize(self.engineHandle)
@@ -136,9 +144,9 @@ public class TycheEndPointDetectorEngine {
                     #endif
                 }
             }
-            
             self.state = TycheEndPointDetectorEngine.State(engineState: engineState)
-            
+            log.debug("### state: \(state) / engineState: \(engineState)")
+
             #if DEBUG
             if self.state == .end {
                 do {
@@ -146,11 +154,13 @@ public class TycheEndPointDetectorEngine {
                                                                     in: .userDomainMask)[0].appendingPathComponent("jade_marble_input.raw")
                     log.debug("input data file :\(epdInputFileName)")
                     try self.inputData.write(to: epdInputFileName)
-                    
+                                        
                     let speexFileName = FileManager.default.urls(for: .documentDirectory,
                                                                  in: .userDomainMask)[0].appendingPathComponent("jade_marble_output.speex")
                     log.debug("speex data file :\(speexFileName)")
                     try self.outputData.write(to: speexFileName)
+                    
+                    
                     
                     self.inputData.removeAll()
                     self.outputData.removeAll()
@@ -161,13 +171,14 @@ public class TycheEndPointDetectorEngine {
             #endif
             
             if [.idle, .listening, .start].contains(self.state) == false {
+                log.debug("### self.internalStop()")
                 self.internalStop()
             }
         }
     }
     
     public func stop() {
-        log.debug("try to stop")
+        log.debug("### try to stop")
         
         epdQueue.async { [weak self] in
             self?.internalStop()
@@ -175,6 +186,7 @@ public class TycheEndPointDetectorEngine {
     }
     
     private func internalStop() {
+        log.debug("### try to internalStop")
         if engineHandle != nil {
             epdClientChannelRELEASE(engineHandle)
             engineHandle = nil
@@ -202,9 +214,10 @@ public class TycheEndPointDetectorEngine {
         #else
         let defalutModelPath = Bundle.module.url(forResource: modelName, withExtension: "raw")!.path
         #endif
-        
+        let modelPath = appModelPath ?? defalutModelPath
+        log.debug("### modelPath: \(modelPath)")
         guard let epdHandle = epdClientChannelSTART(
-            appModelPath ?? defalutModelPath,
+            modelPath,
             myint(sampleRate),
             myint(EndPointDetectorConst.inputStreamType.rawValue),
             myint(EndPointDetectorConst.outputStreamType.rawValue),

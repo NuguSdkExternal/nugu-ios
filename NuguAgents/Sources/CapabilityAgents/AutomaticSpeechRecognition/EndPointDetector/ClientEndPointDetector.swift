@@ -64,6 +64,7 @@ class ClientEndPointDetector: EndPointDetectable {
     }
     
     public func stop() {
+        log.debug("### stop")
         engine.stop()
     }
     

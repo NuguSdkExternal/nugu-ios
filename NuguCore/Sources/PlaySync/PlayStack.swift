@@ -21,6 +21,7 @@
 import Foundation
 
 struct PlayStack {
+    private var persistentStack = [(property: PlaySyncProperty, info: PlaySyncInfo)]()
     private var stack = [(property: PlaySyncProperty, info: PlaySyncInfo)]()
     
     var multiLayerSynced: Bool {
@@ -31,9 +32,23 @@ struct PlayStack {
     }
     
     var playServiceIds: [String] {
-        stack
+        let persistentServiceIds = persistentStack
             .compactMap { $0.info.playStackServiceId }
             .reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
+        
+        let defaultServiceIds = stack
+            .compactMap { $0.info.playStackServiceId }
+            .reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
+        
+        
+        // 중복제거 + 중복된경우 defaultServiceIds의 우선순위
+        var mergedServiceIds = [String]()
+        persistentServiceIds.forEach { element in
+            if defaultServiceIds.contains(element) == false {
+                mergedServiceIds.append(element)
+            }
+        }
+        return mergedServiceIds + defaultServiceIds
     }
     
     subscript(property: PlaySyncProperty) -> PlaySyncInfo? {
@@ -51,5 +66,9 @@ struct PlayStack {
     
     func filter(isIncluded predict: ((property: PlaySyncProperty, info: PlaySyncInfo)) -> Bool) -> [(property: PlaySyncProperty, info: PlaySyncInfo)] {
         return stack.filter(predict)
+    }
+    
+    mutating func pushPresistentPlay(property: PlaySyncProperty, info: PlaySyncInfo) {
+        self.persistentStack.insert((property, info), at: 0)
     }
 }

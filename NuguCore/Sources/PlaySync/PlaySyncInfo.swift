@@ -35,6 +35,8 @@ public struct PlaySyncInfo {
     
     public let historyControl: [String: Any]?
     
+    public let persistent: Bool
+    
     /// <#Description#>
     /// - Parameters:
     ///   - playStackServiceId: <#playStackServiceId description#>
@@ -46,13 +48,15 @@ public struct PlaySyncInfo {
         dialogRequestId: String,
         messageId: String,
         duration: TimeIntervallic,
-        displayHistoryControl: [String: Any]? = nil
+        displayHistoryControl: [String: Any]? = nil,
+        persistent: Bool = false
     ) {
         self.playStackServiceId = playStackServiceId
         self.dialogRequestId = dialogRequestId
         self.messageId = messageId
         self.duration = duration
         self.historyControl = displayHistoryControl
+        self.persistent = persistent
     }
 }
 

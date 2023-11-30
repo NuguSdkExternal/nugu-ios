@@ -78,6 +78,10 @@ public extension PlaySyncManager {
         playSyncDispatchQueue.async { [weak self] in
             log.debug("\(property) \(info)")
             guard let self = self else { return }
+            guard info.persistent == false else {
+                playStack.pushPresistentPlay(property: property, info: info)
+                return
+            }            
 
             // Push to play stack
             self.pushToPlayStack(property: property, info: info)

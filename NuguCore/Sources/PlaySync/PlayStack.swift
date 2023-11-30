@@ -40,7 +40,15 @@ struct PlayStack {
             .compactMap { $0.info.playStackServiceId }
             .reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
         
-        return persistentServiceIds + defaultServiceIds
+        
+        // 중복제거 + 중복된경우 defaultServiceIds의 우선순위
+        var mergedServiceIds = [String]()
+        persistentServiceIds.forEach { element in
+            if defaultServiceIds.contains(element) == false {
+                mergedServiceIds.append(element)
+            }
+        }
+        return mergedServiceIds + defaultServiceIds
     }
     
     subscript(property: PlaySyncProperty) -> PlaySyncInfo? {

@@ -90,6 +90,7 @@ public class TycheEndPointDetectorEngine {
     
     public func putAudioBuffer(buffer: AVAudioPCMBuffer) {
         epdQueue.async { [weak self] in
+            log.debug("putAudioBuffer: \(buffer)")
             guard let self = self else { return }
             guard let ptrPcmData = buffer.int16ChannelData?.pointee,
                 0 < buffer.frameLength else {
@@ -122,11 +123,13 @@ public class TycheEndPointDetectorEngine {
             guard 0 <= engineState else { return }
             
             let length = epdClientChannelGetOutputDataSize(self.engineHandle)
+            log.debug("epdClientChannelGetOutputDataSize: \(length)")
             if 0 < length {
                 let detectedBytes = UnsafeMutablePointer<Int8>.allocate(capacity: Int(length))
                 defer { detectedBytes.deallocate() }
                 
                 let result = epdClientChannelGetOutputData(self.engineHandle, detectedBytes, length)
+                log.debug("epdClientChannelGetOutputData: \(result)")
                 if 0 < result {
                     let detectedData = Data(bytes: detectedBytes, count: Int(result))
                     self.delegate?.tycheEndPointDetectorEngineDidExtract(speechData: detectedData)
@@ -136,9 +139,8 @@ public class TycheEndPointDetectorEngine {
                     #endif
                 }
             }
-            
+            log.debug("engineState: \(engineState)")
             self.state = TycheEndPointDetectorEngine.State(engineState: engineState)
-            
             #if DEBUG
             if self.state == .end {
                 do {

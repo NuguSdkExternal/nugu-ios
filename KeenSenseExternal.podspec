@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'KeenSenseExternal'
-  s.version = '1.7.11-beta.1'
+  s.version = '1.7.11-beta.8'
   s.license = 'Apache License, Version 2.0'
   s.summary = 'Key Word Detector for NUGU'
   s.homepage = 'https://github.com/nugu-developers/nugu-ios'

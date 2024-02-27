@@ -296,17 +296,18 @@ private extension MediaPlayer {
         downloadDataTask?.resume()
     }
     
-    func processPendingRequests() {
-        var requestsCompleted = Set<AVAssetResourceLoadingRequest>()
-        for loadingRequest in pendingRequests {
-            fillInContentInformation(contentInformationRequest: loadingRequest.contentInformationRequest)
-            let didRespondCompletely = respondWithDataForRequest(dataRequest: loadingRequest.dataRequest!)
-            if didRespondCompletely {
-                requestsCompleted.insert(loadingRequest)
-                loadingRequest.finishLoading()
-            }
-        }
+    func processPendingRequests() {        
         pendingRequestQueue.sync {
+            var requestsCompleted = Set<AVAssetResourceLoadingRequest>()
+            for loadingRequest in pendingRequests {
+                fillInContentInformation(contentInformationRequest: loadingRequest.contentInformationRequest)
+                let didRespondCompletely = respondWithDataForRequest(dataRequest: loadingRequest.dataRequest!)
+                if didRespondCompletely {
+                    requestsCompleted.insert(loadingRequest)
+                    loadingRequest.finishLoading()
+                }
+            }
+            
             pendingRequests.subtract(requestsCompleted)
         }
     }

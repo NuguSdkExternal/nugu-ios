@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'NuguAgentsExternal'
-  s.version = '1.7.11-beta.8'
+  s.version = '1.7.12'
   s.license = 'Apache License, Version 2.0'
   s.summary = 'Nugu Agents'
   s.description = <<-DESC
@@ -17,11 +17,11 @@ Default Agent Implementations for Nugu service
 
   s.source_files = 'NuguAgents/Sources/**/*'
   
-  s.dependency 'NuguCoreExternal', '1.7.11-beta.8'
+  s.dependency 'NuguCoreExternal', '1.7.12'
   s.dependency 'NuguUtils', '1.7.9'
   s.dependency 'SilverTray', '1.7.9'
   s.dependency 'NattyLog', '~> 1'
-  s.ios.dependency 'JadeMarbleExternal', '1.7.11-beta.8'
+  s.ios.dependency 'JadeMarbleExternal', '1.7.12'
   
   s.xcconfig = {
     'OTHER_SWIFT_FLAGS' => '-DDEPLOY_OTHER_PACKAGE_MANAGER'
